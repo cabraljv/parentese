@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 import logo from '../../../assets/images/logoBig/LogoBig.png'
 import footerBar from '../../../assets/images/footerBar1/footerBar1.png'
 import { 
@@ -16,6 +16,7 @@ import Icons from 'react-native-vector-icons/Entypo'
 export default function Info1({navigation}) {
   return (
     <Container>
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
         <Logo source={logo}/>
         <MidText>
             Quase la...{'\n'}

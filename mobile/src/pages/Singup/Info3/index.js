@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import { 
   Container, 
@@ -23,6 +23,8 @@ import pp from '../../../assets/images/userPic/userPic.png'
 export default function Info3({navigation}) {
   return (
     <Container>
+      
+      <StatusBar backgroundColor="#fff" barStyle='dark-content' />
       <Header>
           <Logo source={logo} />
       </Header>

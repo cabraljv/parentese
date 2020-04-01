@@ -42,7 +42,8 @@ export const Footer = styled.View`
 	display: flex;
 	flex-direction: row;
 	position: relative;
-    margin-bottom: 70px;
+	margin-top: auto;
+	margin-bottom: 40px;
 `;
 export const FooterBar = styled.Image`
   margin: 0 auto;

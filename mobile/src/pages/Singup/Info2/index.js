@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar,ScrollView } from 'react-native';
 
 import { 
   Container, 
@@ -21,27 +21,30 @@ import Icons from 'react-native-vector-icons/Entypo'
 export default function Info2({navigation}) {
   return (
     <Container>
-      <Header>
-        <ButtonPP>
-          <ImagePP source={user_pp} />
-        </ButtonPP>
-      </Header>
-      <Field>
-        <Label>Nome:</Label>
-        <Input />
-      </Field>
-      <Field>
-        <Label>Idade:</Label>
-        <Input />
-      </Field>
-      <Field>
-        <Label>Cidade:</Label>
-        <Input />
-      </Field>
-      <Field>
-        <Label>Estado:</Label>
-        <Input />
-      </Field>
+      <StatusBar backgroundColor="#8600D9" barStyle='light-content' />
+        <Header>
+          <ButtonPP>
+            <ImagePP source={user_pp} />
+          </ButtonPP>
+        </Header>
+        <ScrollView >
+          <Field>
+            <Label>Nome:</Label>
+            <Input />
+          </Field>
+          <Field>
+            <Label>Idade:</Label>
+            <Input />
+          </Field>
+          <Field>
+            <Label>Cidade:</Label>
+            <Input />
+          </Field>
+          <Field style={{marginBottom: 'auto'}}>
+            <Label>Estado:</Label>
+            <Input />
+          </Field>
+        
       <Footer>
         <FooterBar source={footerBar} />
         <ButtonNext onPress={()=>navigation.push('Info3')}>
@@ -49,7 +52,7 @@ export default function Info2({navigation}) {
           <Icons name="chevron-right" size={35} color="#AC03FF" />
         </ButtonNext>
       </Footer>
-      
+      </ScrollView>
     </Container>
   );
 }

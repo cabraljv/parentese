@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import { 
     Container, 
@@ -20,6 +20,7 @@ import Icons from 'react-native-vector-icons/Entypo'
 export default function Welcome({navigation}) {
   return (
     <Container>
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
         <Header>
             <Logo source={logo} />
         </Header>

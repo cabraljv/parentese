@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import Icons from 'react-native-vector-icons/Entypo'
 import { 
@@ -17,7 +17,7 @@ import {
 export default function WriteText({navigation}) {
   return (
     <Container>
-
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
         <Header>  
             <TextShowTheme>O tema de seu texto é...</TextShowTheme>
             <TextTheme>Amizade</TextTheme>
