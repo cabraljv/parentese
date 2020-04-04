@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { Animated, Text, View, StyleSheet, StatusBar } from 'react-native';
-import { Button } from 'react-native-paper';
-import { NavigationContainer } from '@react-navigation/native';
 import {
   createStackNavigator,
   TransitionPresets
@@ -53,8 +50,6 @@ function MyStack() {
 
 export default function SingUp() {
   return (
-      <NavigationContainer>
         <MyStack />
-      </NavigationContainer>
   );
 }
