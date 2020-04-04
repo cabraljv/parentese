@@ -41,7 +41,7 @@ export const Input = styled.TextInput`
 export const Footer = styled.View`
 	display: flex;
 	flex-direction: row;
-	margin-top: 70px;
+	margin-bottom: 40px;
 	position: relative;
 
 `;
@@ -54,9 +54,9 @@ export const FooterBar = styled.Image`
 export const ButtonNext = styled.TouchableOpacity`
     display: flex;
     flex-direction: row;
-		position: absolute;
-		right: 5%;
-		bottom: -10px;
+	position: absolute;
+	right: 5%;
+	bottom: -10px;
 `;
 
 export const TextButtonNext = styled.Text`

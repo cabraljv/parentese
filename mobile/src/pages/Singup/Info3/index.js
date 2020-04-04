@@ -1,5 +1,5 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
+import React, {useState,useEffect} from 'react';
+import { StatusBar, Animated,Keyboard } from 'react-native';
 
 import { 
   Container, 
@@ -21,15 +21,46 @@ import logo from '../../../assets/images/logo/logo.png'
 import pp from '../../../assets/images/userPic/userPic.png'
 
 export default function Info3({navigation}) {
+  const [picSize] = useState(new Animated.Value(150))
+
+  useEffect(()=>{
+    const keyboardShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
+    const keyboardHideListener = Keyboard.addListener('keyboardDidHide', keyboardDidHide);
+  },[])
+
+  function keyboardDidShow(){
+    Animated.timing(picSize,{
+      toValue: 90,
+      duration: 200,
+      useNativeDriver: false
+    }).start();
+  }
+  function keyboardDidHide(){
+    Animated.timing(picSize,{
+      toValue: 150,
+      duration: 250,
+      useNativeDriver: false
+    }).start();
+  }
+
   return (
     <Container>
       
       <StatusBar backgroundColor="#fff" barStyle='dark-content' />
       <Header>
-          <Logo source={logo} />
+          <Logo 
+            source={logo} 
+          />
       </Header>
       <AboutYou>
-          <ProfilePic source={pp} />
+          <ProfilePic
+            as={Animated.Image}
+            source={pp} 
+            style={{
+              height: picSize,
+              width: picSize,
+            }}
+          />
       </AboutYou>
       <Field>
         <Label>Qual é o seu autor favorito?</Label>

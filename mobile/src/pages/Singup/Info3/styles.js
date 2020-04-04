@@ -16,9 +16,6 @@ export const Logo = styled.Image`
 `;
 export const ProfilePic = styled.Image`
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    
 `;
 export const Field = styled.View`
   width: 90%;

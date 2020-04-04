@@ -1,5 +1,5 @@
-import React from 'react';
-import { StatusBar,ScrollView } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { StatusBar,ScrollView, Animated } from 'react-native';
 
 import { 
   Container, 
@@ -19,6 +19,8 @@ import footerBar from '../../../assets/images/footerBar2/footerBar2.png'
 import Icons from 'react-native-vector-icons/Entypo'
 
 export default function Info2({navigation}) {
+  
+
   return (
     <Container>
       <StatusBar backgroundColor="#8600D9" barStyle='light-content' />
@@ -27,7 +29,6 @@ export default function Info2({navigation}) {
             <ImagePP source={user_pp} />
           </ButtonPP>
         </Header>
-        <ScrollView >
           <Field>
             <Label>Nome:</Label>
             <Input />
@@ -52,7 +53,6 @@ export default function Info2({navigation}) {
           <Icons name="chevron-right" size={35} color="#AC03FF" />
         </ButtonNext>
       </Footer>
-      </ScrollView>
     </Container>
   );
 }

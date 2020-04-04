@@ -4,8 +4,7 @@ import { Button } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import {
   createStackNavigator,
-  TransitionSpecs,
-  HeaderStyleInterpolators,
+  TransitionPresets
 } from '@react-navigation/stack';
 
 import Welcome from './Welcome'
@@ -13,51 +12,6 @@ import WriteText from './WriteText'
 import Info1 from './Info1'
 import Info2 from './Info2'
 import Info3 from './Info3'
-
-
-const MyTransition = {
-  gestureDirection: 'horizontal',
-  transitionSpec: {
-    open: TransitionSpecs.TransitionIOSSpec,
-    close: TransitionSpecs.TransitionIOSSpec,
-  },
-  
-  headerStyleInterpolator: HeaderStyleInterpolators.forFade,
-  cardStyleInterpolator: ({ current, next, layouts }) => {
-    return {
-      cardStyle: {
-        transform: [
-          {
-            translateX: current.progress.interpolate({
-              inputRange: [0, 1],
-              outputRange: [layouts.screen.width, 0],
-            }),
-          },
-          {
-            rotate: current.progress.interpolate({
-              inputRange: [0, 1],
-              outputRange: [1, 0],
-            }),
-          },
-          {
-            scale: next
-              ? next.progress.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [1, 0.9],
-                })
-              : 1,
-          },
-        ],
-      },
-      overlayStyle: {
-        opacity: current.progress.interpolate({
-          inputRange: [0, 1],
-          outputRange: [0, 0.5],
-        }),
-      },
-    };
-  },
-};
 
 
 
@@ -70,8 +24,8 @@ function MyStack() {
       screenOptions={{
         cardOverlayEnabled: true,
         gestureEnabled: true,
-        ...MyTransition,
-      }}
+        ...TransitionPresets.SlideFromRightIOS
+      }} 
     >
       <Stack.Screen
         name="Welcome"
@@ -79,7 +33,7 @@ function MyStack() {
       />
       <Stack.Screen
         name="WriteText"
-        component={WriteText}   
+        component={WriteText}
       />
       <Stack.Screen
         name="Info1"
