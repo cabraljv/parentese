@@ -1,38 +1,70 @@
 import * as React from 'react';
 
-import {createDrawerNavigator} from '@react-navigation/drawer'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-import Main from './Main'
-import Profile from './Profile'
-import Store from './Store'
-import DrawerNavigator from './DrawerNavigator';
+import Main from './Main';
+import Ranking from './Ranking';
+import Notifications from './Notifications'
+import Messages from './Messages';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 
-const Drawer = createDrawerNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
-function DrawerMain() {
+function TabFeed() {
   return (
-    <Drawer.Navigator
-        drawerContent={DrawerNavigator}
+    <Tab.Navigator
+      initialRouteName="Main"
+      activeColor="#2B2B2B"
+      inactiveColor="#858585"
+      barStyle={{backgroundColor:'#fff'}}
     >
-      <Drawer.Screen
+      <Tab.Screen
         name="Main"
-        component={Main}   
+        component={Main}    
+          options={{
+          title:'Feed',
+          tabBarIcon: ({ color }) => (
+            <SimpleLineIcons name="home" color={color} size={22} />
+          ),
+        }}
       />
-      <Drawer.Screen
-        name="Profile"
-        component={Profile}   
+      <Tab.Screen
+        name="Ranking"
+        component={Ranking}   
+        options={{
+          title:'Ranking',
+          tabBarIcon: ({ color }) => (
+            <SimpleLineIcons name="trophy" color={color} size={22} />
+          ),
+        }}
       />
-      <Drawer.Screen
-        name="Store"
-        component={Store}   
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}   
+        options={{
+          title:'Notificações',
+          tabBarIcon: ({ color }) => (
+            <SimpleLineIcons name="bell" color={color} size={22} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Messages"
+        component={Messages}  
+        options={{
+          title:'Menssagens',
+          tabBarIcon: ({ color }) => (
+            <SimpleLineIcons name="envelope" color={color} size={22}  />
+          ),
+        }} 
       />
 
-    </Drawer.Navigator>
+    </Tab.Navigator>
   );
 }
 
-export default function SingUp() {
+export default function Feed() {
   return (
-        <DrawerMain />
+        <TabFeed />
   );
 }

@@ -18,7 +18,7 @@ import googleIcon from '../../assets/icons/google.png'
 export default function Login({navigation}) {
   return (
     <Container>
-      <StatusBar hidden />
+      <StatusBar translucent backgroundColor="transparent" />
       <Background source={bg} />
       <Logo source={logo} />
       <ViewText>
@@ -34,7 +34,7 @@ export default function Login({navigation}) {
         <IconView>
           <IconImage source={googleIcon} />
         </IconView>
-        <BtnText onPress={()=>navigation.push('Feed')}>Entrar com o Google</BtnText>
+        <BtnText onPress={()=>navigation.push('DrawerMain')}>Entrar com o Google</BtnText>
       </ButtonLogin>
     </Container>
   );

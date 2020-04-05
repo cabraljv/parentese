@@ -6,9 +6,10 @@ import {
 } from '@react-navigation/stack';
 
 import SingUp from './pages/Singup'
-import Feed from './pages/Feed'
+import DrawerMain from './pages/DrawerMain'
 import Login from './pages/Login'
-
+import Comment from './pages/Comment'
+import Quiz from './pages/Quiz';
 
 
 const Stack = createStackNavigator();
@@ -22,7 +23,7 @@ function MyStack() {
         gestureEnabled: true,
         ...TransitionPresets.SlideFromRightIOS
       }} 
-      initialRouteName="Login"
+      initialRouteName="DrawerMain"
     >
       <Stack.Screen
         name="SingUp"
@@ -33,14 +34,27 @@ function MyStack() {
         component={Login}   
       />
       <Stack.Screen
-        name="Feed"
-        component={Feed}   
+        name="DrawerMain"
+        component={DrawerMain}   
         options={{
             gestureEnabled: false,
         }}
       />
-
-
+      <Stack.Screen
+        name="Comment"
+        component={Comment}   
+        options={{
+            gestureEnabled: false,
+            ...TransitionPresets.FadeFromBottomAndroid
+        }}
+      />
+      <Stack.Screen
+        name="Quiz"
+        component={Quiz}
+        options={{
+          gestureEnabled: false,
+        }}   
+      />
     </Stack.Navigator>
   );
 }

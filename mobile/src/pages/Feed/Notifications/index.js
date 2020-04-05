@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-export default function Store() {
+export default function Notifications() {
   return (
     <View />
   );
