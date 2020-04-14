@@ -22,7 +22,6 @@ export default function DrawerNavigator(props) {
           <AntDesign name='setting' color='#fff' size={35} />
           <ItemText>Configurações</ItemText>
         </Item>
-       
     </Container>
   );
 }

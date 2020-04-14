@@ -1,7 +1,5 @@
-import * as React from 'react';
-
+import * as React from 'react'
 import {createDrawerNavigator} from '@react-navigation/drawer'
-
 import Main from '../Feed'
 import Profile from '../Profile'
 import Store from '../Store'

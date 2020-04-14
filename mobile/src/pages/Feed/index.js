@@ -58,7 +58,6 @@ function TabFeed() {
           ),
         }} 
       />
-
     </Tab.Navigator>
   );
 }

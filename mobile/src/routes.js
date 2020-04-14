@@ -10,6 +10,7 @@ import DrawerMain from './pages/DrawerMain'
 import Login from './pages/Login'
 import Comment from './pages/Comment'
 import Quiz from './pages/Quiz';
+import QuizQuestion from './pages/QuizQuestion';
 
 
 const Stack = createStackNavigator();
@@ -51,6 +52,13 @@ function MyStack() {
       <Stack.Screen
         name="Quiz"
         component={Quiz}
+        options={{
+          gestureEnabled: false,
+        }}   
+      />
+      <Stack.Screen
+        name="QuizQuestion"
+        component={QuizQuestion}
         options={{
           gestureEnabled: false,
         }}   

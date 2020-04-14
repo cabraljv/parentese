@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import star from '../../assets/icons/starYellow/starYellow.png'
 import commentIcon from '../../assets/icons/commentPrimary/commentPrimary.png'
