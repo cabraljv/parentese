@@ -16,7 +16,7 @@ import Icons from 'react-native-vector-icons/Entypo'
 export default function Info1({navigation}) {
   return (
     <Container>
-        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' translucent={false} />
         <Logo source={logo}/>
         <MidText>
             Quase la...{'\n'}
