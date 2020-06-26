@@ -40,7 +40,7 @@ export default function Quiz({ navigation }) {
             <ThemeField>
                 <ThemeText>Romance</ThemeText>
             </ThemeField>
-            <BtnStart>
+            <BtnStart onPress={()=>navigation.push('QuizQuestion')} >
                 <BtnText>COMEÇAR</BtnText>
             </BtnStart>
         </Content>
