@@ -34,7 +34,7 @@ export default function Login({navigation}) {
         <IconView>
           <IconImage source={googleIcon} />
         </IconView>
-        <BtnText onPress={()=>navigation.push('DrawerMain')}>Entrar com o Google</BtnText>
+        <BtnText onPress={()=>navigation.push('SingUp')}>Entrar com o Google</BtnText>
       </ButtonLogin>
     </Container>
   );

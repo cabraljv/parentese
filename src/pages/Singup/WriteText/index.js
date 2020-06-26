@@ -17,7 +17,7 @@ import {
 export default function WriteText({navigation}) {
   return (
     <Container>
-        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' translucent={false} />
         <Header>  
             <TextShowTheme>O tema de seu texto é...</TextShowTheme>
             <TextTheme>Amizade</TextTheme>

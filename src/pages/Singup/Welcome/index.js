@@ -20,7 +20,7 @@ import Icons from 'react-native-vector-icons/Entypo'
 export default function Welcome({navigation}) {
   return (
     <Container>
-        <StatusBar backgroundColor="#fff" barStyle='dark-content' />
+        <StatusBar backgroundColor="#fff" barStyle='dark-content' translucent={false}/>
         <Header>
             <Logo source={logo} />
         </Header>

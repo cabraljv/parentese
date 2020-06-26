@@ -24,7 +24,7 @@ function MyStack() {
         gestureEnabled: true,
         ...TransitionPresets.SlideFromRightIOS
       }} 
-      initialRouteName="DrawerMain"
+      initialRouteName="Login"
     >
       <Stack.Screen
         name="SingUp"
