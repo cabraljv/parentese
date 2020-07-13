@@ -20,6 +20,7 @@ import {
 import CommentItem from '../../components/CommentItem'
 import Feather from 'react-native-vector-icons/Feather'
 
+
 export default function Comment({navigation}) {
   return (
     <Container >
